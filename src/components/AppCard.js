@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 
-function App({ app, index }) {
+function AppCard({ app }) {
   return (
-    <h2>AppCard</h2>
+    <div className="app-card">
+      <img src={app.logo_link}/>
+      <h2>
+        <Link to={`/apps/${app.id}`} >{app.name}</Link>
+      </h2>
+      <p>{app.is_favorite ? "❤️" : "🩶"}</p>
+    </div>
   );
 }
 
-export default App;
+export default AppCard;

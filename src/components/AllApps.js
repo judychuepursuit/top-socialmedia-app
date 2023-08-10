@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import OneApp from "./AppCard";
+import AppCard from "./AppCard";
 
 const API = process.env.REACT_APP_API_URL;
-// console.log(API)
 
 function AllApps() {
   const [allApps, setAllApps] = useState([]);
@@ -17,10 +16,10 @@ function AllApps() {
 
 
   return (
-    <div className="apps">
-      <section>
-        
-      </section>
+    <div className="all-apps">
+      {allApps.map(app =>
+        <AppCard key={app.id} app={app}/>
+      )}
     </div>
   );
 }

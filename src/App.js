@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
 import FourOFour from "./pages/FourOFour";
+import Header from "./components/Header";
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Edit from "./pages/Edit";
@@ -15,16 +16,15 @@ import New from "./pages/New";
 function App() {
   return (
     <div className="App">
-          Top Social Media App
-          <Router>
-        <Home />
+      <Router>
+        <Header/>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/apps" element={<Index />} />
             <Route path="/apps/new" element={<New />} />
-            <Route path="/apps/:index" element={<Show />} />
-            <Route path="/apps/:index/edit" element={<Edit />} />
+            <Route path="/apps/:id" element={<Show />} />
+            <Route path="/apps/:id/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>

@@ -3,21 +3,22 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const API = process.env.REACT_APP_API_URL;
+
 function AppDetail() {
     const [app, setApp] = useState([]);
-    let { index } = useParams();
     let navigate = useNavigate();
+    let { id } = useParams();
   
     useEffect(() => {
       axios
-        .get(`${API}/logs/${index}`)
+        .get(`${API}/apps/${id}`)
         .then(response => setApp(response.data))
         .catch(() => navigate("/not-found"));
-    }, [index, navigate]);
+    }, [id, navigate]);
   
     const handleDelete = () => {
       axios
-        .delete(`${API}/apps/${index}`)
+        .delete(`${API}/apps/${id}`)
         .then(() => navigate(`/apps`))
         .catch((e) => console.error(e));
     };
@@ -25,9 +26,12 @@ function AppDetail() {
     return (
       <article className="app-page">
         <div className="app-detail">
-          <h2>{app.title} - By {app.appName}</h2>
-          <h4>{app.post}</h4>
-          <h5>Days since last crisis: {app.daysSinceLastCrisis}</h5>
+          <img src={app.logo_link}/>
+          <h2>{app.name} {app.is_favorite ? "❤️" : "🩶"}</h2>
+          <p>Aprox. Monthly Users: {app.ma_users}</p>
+          <p>Launch Year: {app.launched}</p>
+          <p>Official Website: <a href={app.website} target="_blank">{app.website}</a>
+          </p>
         </div>
         <div className="showNavigation">
           <div>
@@ -38,7 +42,7 @@ function AppDetail() {
           </div>
           <div>
             {" "}
-            <Link to={`/apps/${index}/edit`}>
+            <Link to={`/apps/${id}/edit`}>
               <button>Edit</button>
             </Link>
           </div>

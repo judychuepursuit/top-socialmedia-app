@@ -5,105 +5,121 @@ import { useState, useEffect } from "react";
 const API = process.env.REACT_APP_API_URL;
 
 function EditApp() {
-  let { index } = useParams();
-
+  let { id } = useParams();
   const navigate = useNavigate();
-  const [lapp, setapp] = useState({
-    captainName: "",
-    title: "",
-    post: "",
-    daysSinceLastCrisis: 0,
-    mistakesWereMadeToday: false,
+
+  const [app, setApp] = useState({
+    name: "",
+    rating: "",
+    launched: "",
+    ma_users: "",
+    website: "",
+    logo_link: "",
+    is_favorite: false,
   });
 
-  const updateapp = () => {
+  const updateApp = (updatedApp) => {
     axios
-      .put(`${API}/apps/${index}`, app)
-      .then((response) => {
-        setlog(response.data);
-        navigate(`/logs/${index}`);
-      })
+      .put(`${API}/apps/${id}`, updatedApp)
+      .then(() => {
+          navigate(`/apps/${id}`);
+        },
+        (error) => console.error(error))
       .catch((c) => console.warn("catch", c));
   };
 
   const handleTextChange = (event) => {
-    setapp({ ...app, [event.target.id]: event.target.value });
+    setApp({ ...app, [event.target.id]: event.target.value });
   };
 
   const handleCheckboxChange = () => {
-    setapp({ ...app, mistakesWereMadeToday: !log.mistakesWereMadeToday });
+    setApp({ ...app, is_favorite: !app.is_favorite });
   };
 
   useEffect(() => {
     axios
-      .get(`${API}/logs/${index}`)
-      .then((response) => {
-        setlog(response.data);
-      })
-      .catch((e) => console.error(e));
-  }, [index]);
+      .get(`${API}/apps/${id}`)
+      .then(
+        (response) => setApp(response.data),
+        (error) => navigate(`/not-found`)
+      );
+  }, [id, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    updateapp();
+    updateApp(app, id);
   };
 
   return (
     <div className="Edit">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="captainName">Captain's Name:</label>
+        <label htmlFor="name">App's Name:</label>
         <input
-          id="socialmedia"
-          value={log.captainName}
+          id="name"
+          value={app.name}
           type="text"
           onChange={handleTextChange}
           placeholder="Name of App"
           required
         />
-        <label htmlFor="title">Title:</label>
+        <label htmlFor="rating">App Rating:</label>
         <input
-          id="title"
+          id="rating"
           type="text"
-          required
-          value={app.title}
-          placeholder="Title"
+          value={app.rating}
+          placeholder="rating"
           onChange={handleTextChange}
         />
-        <label htmlFor="post">Post:</label>
-        <textarea
-          id="post"
+        <label htmlFor="launched">Launched Year:</label>
+        <input
+          id="launched"
           type="text"
-          name="post"
+          name="launched"
+          value={app.launched}
+          placeholder="Launched Year"
+          onChange={handleTextChange}
+        />
+        <label htmlFor="ma_users">Monthly Users:</label>
+        <input
+          id="ma_users"
+          name="ma_users"
+          type="text"
+          value={app.ma_users}
+          onChange={handleTextChange}
+          placeholder="Monthly Users"
+        />
+        <label htmlFor="website">Website:</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          value={app.website}
+          onChange={handleTextChange}
+          placeholder="https://"
           required
-          value={log.post}
-          placeholder="Quote"
-          onChange={handleTextChange}
         />
-        <label htmlFor="daysSinceLastCrisis">Days Since Last Crisis:</label>
+        <label htmlFor="logo_link">Logo Link:</label>
         <input
-          id="daysSinceLastCrisis"
-          name="daysSinceLastCrisis"
-          type="number"
-          value={log.daysSinceLastCrisis}
+          id="logo_link"
+          name="logo_link"
+          type="text"
+          value={app.logo_link}
           onChange={handleTextChange}
-          placeholder="Days Since Last Crisis"
+          placeholder="https://"
         />
-        <label htmlFor="mistakesWereMadeToday">Mistakes were made today:</label>
+        <label htmlFor="is_favorite">Is Favorite?:</label>
         <input
-          id="mistakesWereMadeToday"
+          id="is_favorite"
           type="checkbox"
           onChange={handleCheckboxChange}
-          checked={log.mistakesWereMadeToday}
+          checked={app.is_favorite}
         />
         <br />
 
         <input type="submit" />
       </form>
-      <Link to={`/logs/${index}`}>
-        <button>Cancel Log!</button>
-      </Link>
-      <Link to={`/logs/`}>
-        <button>Back</button>
+      <Link to={`/apps/${id}`}>
+        <button>Cancel</button>
       </Link>
     </div>
   );
