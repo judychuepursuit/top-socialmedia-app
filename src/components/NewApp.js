@@ -9,15 +9,15 @@ function NewApp(props) {
   const [submitError, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-    const [app, setApp] = useState({
-      name: "",
-      rating: "",
-      launched: "",
-      ma_users: "",
-      website: "",
-      logo_link: "",
-      is_favorite: false,
-    });
+  const [app, setApp] = useState({
+    name: "",
+    rating: "",
+    launched: "",
+    ma_users: "",
+    website: "",
+    logo_link: "",
+    is_favorite: false,
+  });
 
   const addApp = (newApp) => {
     axios
@@ -48,6 +48,7 @@ function NewApp(props) {
     event.preventDefault();
     addApp(app);
   };
+
   return (
     <div className="NewApp">
       {submitError ? <h2>There was an error : {errorMessage.Error}</h2> : null}
@@ -73,7 +74,7 @@ function NewApp(props) {
         <input
           id="launched"
           type="text"
-          name="album"
+          name="launched"
           value={app.launched}
           placeholder="Launched Year"
           onChange={handleTextChange}
@@ -106,7 +107,7 @@ function NewApp(props) {
           onChange={handleTextChange}
           placeholder="https://"
         />
-        <label htmlFor="is_favorite">Is Favorite?</label>
+        <label htmlFor="is_favorite">Is Favorite?:</label>
         <input
           id="is_favorite"
           type="checkbox"

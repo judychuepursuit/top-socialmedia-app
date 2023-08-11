@@ -115,7 +115,6 @@ function EditApp() {
           checked={app.is_favorite}
         />
         <br />
-
         <input type="submit" />
       </form>
       <Link to={`/apps/${id}`}>
