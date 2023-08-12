@@ -29,7 +29,7 @@ function AppDetail() {
     <article className="app-page">
       <div className="app-detail">
         <img src={app.logo_link ? app.logo_link : noLogo}/>
-        <h2>{app.name} {app.is_favorite ? "❤️" : "🩶"}</h2>
+        <h2>{app.name} {app.is_favorite ? "❤️" : "♡"}</h2>
         <p><span>App Rating:</span> {app.rating} ⭐️</p>
         <p><span>Aprox. Monthly Users:</span> {app.ma_users}</p>
         <p><span>Launch Year:</span> {app.launched}</p>
