@@ -28,12 +28,16 @@ function AppDetail() {
   return (
     <article className="app-page">
       <div className="app-detail">
-        <img src={app.logo_link ? app.logo_link : noLogo}/>
-        <h2>{app.name} {app.is_favorite ? "❤️" : "♡"}</h2>
-        <p><span>App Rating:</span> {app.rating} ⭐️</p>
-        <p><span>Aprox. Monthly Users:</span> {app.ma_users}</p>
-        <p><span>Launch Year:</span> {app.launched}</p>
-        <p><span>Official Website:</span> <a href={app.website} target="_blank">{app.website}</a></p>
+        <div className="image">
+          <img src={app.logo_link ? app.logo_link : noLogo}/>
+        </div>
+        <div className="detail">
+          <h2>{app.is_favorite ? "❤️" : "♡"} {app.name}</h2>
+          <p><span>App Rating:</span> {app.rating} ⭐️</p>
+          <p><span>Aprox. Monthly Users:</span> {app.ma_users}</p>
+          <p><span>Launch Year:</span> {app.launched}</p>
+          <p><span>Official Website:</span> <a href={app.website} target="_blank">{app.website}</a></p>
+        </div>
       </div>
       <div className="navigation">
         <div>

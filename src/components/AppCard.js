@@ -9,7 +9,7 @@ function AppCard({ app }) {
       </div>
       <div>
         <h3>
-          <Link to={`/apps/${app.id}`} >{app.is_favorite ? "❤️" : "🩶"} {app.name}</Link>
+          <Link to={`/apps/${app.id}`} >{app.is_favorite ? "❤️" : "♡"} {app.name}</Link>
         </h3>
       </div>
     </div>

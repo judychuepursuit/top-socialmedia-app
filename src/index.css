@@ -8,15 +8,20 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  /* background-image: url(/Users/judychue/Desktop/top-socialmedia-app/src/components/pramod-tiwari-DjVDIZotikY-unsplash.jpg); */
-  background-image: url(/Users/judychue/Desktop/top-socialmedia-app/src/components/zaid-ajani-ONYiHwIO3ho-unsplash.jpg);
-  background-repeat: no-repeat; 
-  background-size: 125% 125%;
-  /* background: linear-gradient(to bottom right, mediumblue, #92cffb); */
+  background-image: url("./components/background-1.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+span {
+  font-weight: bold;
 }
 
 nav {
-  background: linear-gradient(to bottom right, rgb(16, 60, 233), #92cffb);
+  background: linear-gradient(to bottom right, #103ce9, #92cffb);
   padding: 1.5em;
   text-align: center;
 }
@@ -25,8 +30,17 @@ nav h1 {
   font-size: 45px;
 }
 
+nav a:hover {
+  color: #103ce9;
+}
+
 a {
+  color: #103ce9;
   text-decoration: none;
+}
+
+a:hover {
+  color: #800080;
 }
 
 nav a {
@@ -36,38 +50,26 @@ nav a {
 .Home {
   display: flex;
   align-items: center;
-  justify-items: center;
-  color: rgb(47, 47, 248);
-
-  /* background-image: url(/Users/judychue/Desktop/top-socialmedia-app/src/components/zaid-ajani-ONYiHwIO3ho-unsplash.jpg); */
-  background-repeat: no-repeat; 
-  background-size: cover;
-  /* background-color: white; */
-  /* justify-content: center; */
+  justify-content: center;
 }
 
 .Home div {
   margin: 2em;
   text-align: center;
-  height: 40em;
 }
 
 .Home img {
   width: 150px;
 }
 
-.all-apps-links{
-  color: mediumblue
-}
-
-.Index {
+.Index, .Show {
   display: flex;
   flex-direction: column;
-  color: white;
-  padding-left: 20px;
+  margin-top: 3em;
 }
 
-.index-inner {
+.inner {
+  color: #216fff;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -75,10 +77,10 @@ nav a {
 
 }
 
-.NewApp{
+.NewApp {
   padding-left: 5em;
   display: flex;
-  flex-direction: row;;
+  flex-direction: row;
   color:white;
   width: 80%;
   padding-top: 5px;
@@ -97,9 +99,10 @@ nav a {
 
 .app-card {
   display: flex;
-  background-color: white;
   align-items: center;
-  /* border: 1px solid #b8ddf8; */
+  background-color: #9cd5fd;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px 0px #474747cc;
   flex-direction: column;
   justify-content: center;
   margin: 15px;
@@ -108,9 +111,30 @@ nav a {
 }
 
 .app-card img {
-  border-radius: 10px;
+  border-radius: 15px;
   width: 100px;
   color: white;
   margin-top: 25px;
 }
 
+.app-detail {
+  display: flex;
+  flex-direction: row;
+  background-color: #9cd5fd;
+  border-radius: 20px;
+  box-shadow: 6px 6px 10px 0px #474747cc;
+  margin: auto;
+  padding: 1.2em 0 1.2em 0;
+  width: 50%;
+}
+
+.app-detail img {
+  width: 150px;
+  border-radius: 18px;
+  margin: 0 2em 0 3em;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+}

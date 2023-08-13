@@ -3,10 +3,10 @@ import AppDetail from "../components/AppDetail";
 function Show() {
   return (
     <div className="Show">
-      <h2>Show</h2>
-      <section>
-        <AppDetail />
-      </section>
+      <div className="inner">
+        <h2>App Detail</h2>
+      </div>
+      <AppDetail />
     </div>
   );
 }
