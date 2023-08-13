@@ -1,4 +1,4 @@
-Judychuepursuit   and https://github.com/RK-404/
+https://github.com/judychuepursuit and https://github.com/RK-404/
 <!DOCTYPE html>
 <html>
   <head>
