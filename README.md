@@ -19,7 +19,7 @@ src="src/components/images/top-socialmedia-app Index page.png" width="350"></img
 
 <h2> Here are the Github repository links: social-media-pair-app Back end:</h2>
       <ul>
-        <li>DATABASE_URL: <a>https://github.com/judychuepursuit/social-media-pair-app</a></li>
+        <li>DATABASE_URL: <a href="https://github.com/judychuepursuit/social-media-pair-app</a></li>
 
 <h2> This App applies the PERN Stack & C-R-U-D points.</h2>
 <p>HTTP Methods: HTTP methods are also called verbs. They are types of requests you can make to a server. The four most common ones are listed below:</p>
