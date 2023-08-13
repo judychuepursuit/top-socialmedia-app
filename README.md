@@ -17,9 +17,12 @@ src="src/components/images/top-socialmedia-app Index page.png" width="350"></img
 <li><a href="https://trello.com/b/0Z4MrYHZ"> Pair Project Trello Board</a></li>
 <img alt="trello" src="src/components/images/Pair Project Top Social Media Apps.png" width="350"></img>
 
-<h2> Here are the Github repository links: social-media-pair-app Back end:</h2>
+<h2> Here are the Github repository links: Front and Back end to The Social Media App:</h2>
       <ul>
-      <li>DATABASE_URL: <a href="[http://http://localhost:3000](https://github.com/judychuepursuit/social-media-pair-app)"></a></li>
+        <li>DATABASE_URL: https://github.com/judychuepursuit/top-socialmedia-app</li>
+<br>
+        <li>DATABASE_URL: https://github.com/judychuepursuit/social-media-pair-app</li>
+      </ul>
 
 <h2> This App applies the PERN Stack & C-R-U-D points.</h2>
 <p>HTTP Methods: HTTP methods are also called verbs. They are types of requests you can make to a server. The four most common ones are listed below:</p>
