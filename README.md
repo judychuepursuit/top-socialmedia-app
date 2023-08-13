@@ -21,7 +21,7 @@ src="src/components/images/top-socialmedia-app Index page.png" width="350"></img
       <ul>
         <li>DATABASE_URL:<a href= https://github.com/judychuepursuit/top-socialmedia-app> Top Social Media App Front</a></li>
 <br>
-        <li>DATABASE_URL: https://github.com/judychuepursuit/social-media-pair-app</li>
+        <li>DATABASE_URL: <a href= https://github.com/judychuepursuit/social-media-pair-app>Top Social Media App Back</a></li>
       </ul>
 
 <h2> This App applies the PERN Stack & C-R-U-D points.</h2>
