@@ -17,7 +17,7 @@ src="src/components/images/top-socialmedia-app Index page.png" width="350"></img
 <li><a href="https://trello.com/b/0Z4MrYHZ"> Pair Project Trello Board</a></li>
 <img alt="trello" src="src/components/images/Pair Project Top Social Media Apps.png" width="350"></img>
 
-<h2> Here are the Github repository links: Front and Back end to The Social Media App:</h2>
+<h2> Here are the Github repository links: Front and Back end <b>The Social Media App:</b></h2>
       <ul>
         <li>DATABASE_URL:<a href= https://github.com/judychuepursuit/top-socialmedia-app> Top Social Media App Front</a></li>
 <br>
