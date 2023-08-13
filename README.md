@@ -19,7 +19,7 @@ src="src/components/images/top-socialmedia-app Index page.png" width="350"></img
 
 <h2> Here are the Github repository links: Front and Back end to The Social Media App:</h2>
       <ul>
-        <li>DATABASE_URL: https://github.com/judychuepursuit/top-socialmedia-app</li>
+        <li><a href= https://github.com/judychuepursuit/top-socialmedia-app> Top Social Media App Front</a>a></li>
 <br>
         <li>DATABASE_URL: https://github.com/judychuepursuit/social-media-pair-app</li>
       </ul>
