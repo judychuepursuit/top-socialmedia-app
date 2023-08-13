@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // PAGES
 import FourOFour from "./pages/FourOFour";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Home from "./pages/Home";
 import Edit from "./pages/Edit";
@@ -26,8 +27,10 @@ function App() {
             <Route path="/apps/:id" element={<Show />} />
             <Route path="/apps/:id/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} />
+            <Route path="/apps/*" element={<FourOFour />} />
           </Routes>
         </main>
+        <Footer/>
       </Router>
     </div>
   );

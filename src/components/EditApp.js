@@ -51,7 +51,7 @@ function EditApp() {
   };
 
   return (
-    <div className="Edit">
+    <div className="NewEdit">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">App's Name:</label>
         <input
@@ -115,10 +115,10 @@ function EditApp() {
           checked={app.is_favorite}
         />
         <br />
-        <input type="submit" />
+        <input type="submit" value="SUBMIT"/>
       </form>
       <Link to={`/apps/${id}`}>
-        <button>Cancel</button>
+        <button>BACK</button>
       </Link>
     </div>
   );

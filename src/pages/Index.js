@@ -7,7 +7,7 @@ function Index() {
       <div className="inner">
         <h2>Apps List</h2>
         <Link to="/apps/new" className="header-link">
-          <button className="new-btn">New App</button>
+          <button className="new-btn">NEW APP</button>
         </Link>
       </div>
       <AllApps />

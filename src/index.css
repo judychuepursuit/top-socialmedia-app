@@ -8,7 +8,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  background-image: url("./components/background-1.jpg");
+  background-image: url("./components/images/background.jpg");
+  background-color: #7c94c1;
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
@@ -50,7 +51,13 @@ nav a {
 .Home {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+}
+
+.Home h1 {
+  color: white;
+  text-shadow: 1px 1px 2px #ff0000, 0 0 1em #0000ff, 0 0 0.2em #0000ff;
 }
 
 .Home div {
@@ -59,10 +66,10 @@ nav a {
 }
 
 .Home img {
-  width: 150px;
+  width: 250px;
 }
 
-.Index, .Show {
+.Index {
   display: flex;
   flex-direction: column;
   margin-top: 3em;
@@ -72,18 +79,9 @@ nav a {
   color: #216fff;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
   margin: 1em;
-
-}
-
-.NewApp {
-  padding-left: 5em;
-  display: flex;
-  flex-direction: row;
-  color:white;
-  width: 80%;
-  padding-top: 5px;
 
 }
 
@@ -123,6 +121,7 @@ nav a {
   background-color: #9cd5fd;
   border-radius: 20px;
   box-shadow: 6px 6px 10px 0px #474747cc;
+  color: white;
   margin: auto;
   padding: 1.2em 0 1.2em 0;
   width: 50%;
@@ -137,4 +136,90 @@ nav a {
 .image {
   display: flex;
   align-items: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-top: 2em;
+  width: 50%;
+}
+
+input[type="submit"], button {
+  background-color: #92cffb;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px 0px #474747cc;
+  color: #216fff;
+  font-weight: bold;
+  padding: 0.7em 2em 0.7em 2em;
+}
+
+input[type="submit"] {
+  width: 25%;
+  background-color: white;
+}
+
+input[type="submit"]:hover, button:hover {
+  color: #800080;
+  cursor: pointer;
+}
+
+.not-found {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3em;
+  color: #ff0000;
+}
+
+.not-found img {
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px 0px #474747cc;
+  width: 250px;
+}
+
+.NewEdit {
+  /* padding-left: 5em; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: auto;
+  width: 70%;
+  /* padding-top: 5px; */
+}
+
+form {
+  background-color: #9cd5fd;
+  border-radius: 18px;
+  box-shadow: 6px 6px 10px 0px #474747cc;
+  font-weight: bold;
+  margin: auto;
+  margin: 0 0 2em 0;
+  /* margin-bottom: 2em; */
+  padding: 2.5em 1.5em 1.5em 2.5em;
+  width: 95%;
+}
+
+input {
+  display: block;
+  margin: auto;
+  margin-bottom: 1.5em;
+  width: 90%;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  width: 25%;
+}
+
+footer {
+  color: white;
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 1%;
 }

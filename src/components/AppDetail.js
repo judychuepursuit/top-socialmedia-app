@@ -1,6 +1,6 @@
-import noLogo from "./no-logo.jpg";
+import noLogo from "./images/no-logo.jpg";
 
-import { Link, useParams, withRouter, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -43,18 +43,18 @@ function AppDetail() {
         <div>
           {" "}
           <Link to={`/apps`}>
-            <button>Back</button>
+            <button>BACK</button>
           </Link>
         </div>
         <div>
           {" "}
           <Link to={`/apps/${id}/edit`}>
-            <button>Edit</button>
+            <button>EDIT</button>
           </Link>
         </div>
         <div>
           {" "}
-          <button onClick={handleDelete}>Delete</button>
+          <button onClick={handleDelete}>DELETE</button>
         </div>
       </div>
     </article>

@@ -1,4 +1,4 @@
-import noLogo from "./no-logo.jpg";
+import noLogo from "./images/no-logo.jpg";
 import { Link } from "react-router-dom";
 
 function AppCard({ app }) {

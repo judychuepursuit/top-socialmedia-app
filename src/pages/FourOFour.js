@@ -1,7 +1,10 @@
+import noLogo from "../components/images/no-logo.jpg";
+
 function FourOFour() {
     return (
-      <div>
-        <h1>Sorry, no page found</h1>
+      <div className="not-found">
+        <img src={noLogo}/>
+        <h1>Sorry, Page not found!</h1>
       </div>
     );
   }

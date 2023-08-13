@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -50,7 +50,7 @@ function NewApp(props) {
   };
 
   return (
-    <div className="NewApp">
+    <div className="NewEdit">
       {submitError ? <h2>There was an error : {errorMessage.Error}</h2> : null}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">App's Name:</label>
@@ -67,7 +67,7 @@ function NewApp(props) {
           id="rating"
           type="text"
           value={app.rating}
-          placeholder="rating"
+          placeholder="-.-/5"
           onChange={handleTextChange}
         />
         <label htmlFor="launched">Launched Year:</label>
@@ -86,13 +86,13 @@ function NewApp(props) {
           type="text"
           value={app.ma_users}
           onChange={handleTextChange}
-          placeholder="Monthly Users"
+          placeholder="Approx. Monthly Users"
         />
         <label htmlFor="website">Website:</label>
         <input
           id="website"
           name="website"
-          type="text"
+          type="url"
           value={app.website}
           onChange={handleTextChange}
           placeholder="https://"
@@ -102,7 +102,7 @@ function NewApp(props) {
         <input
           id="logo_link"
           name="logo_link"
-          type="text"
+          type="url"
           value={app.logo_link}
           onChange={handleTextChange}
           placeholder="https://"
@@ -115,8 +115,11 @@ function NewApp(props) {
           checked={app.is_favorite}
         />
         <br />
-        <input type="submit" />
+        <input type="submit"  value="SUBMIT"/>
       </form>
+      <Link to={`/apps`}>
+        <button>BACK</button>
+      </Link>
     </div>
   );
 }
