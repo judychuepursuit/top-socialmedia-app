@@ -53,6 +53,6 @@ Note: Make sure that the .env file has been correctly saved inside the main fold
 </ul>
 
 </p>
-<h2>We are Excited to any Work & Collaboration opportunities!</h2>
+<h2>We are Excited to Collaborate on any work opportunities!</h2>
 <p>
 As beginner Full-Stack web developers we are seeking and are open to collaborating on work projects. Feel free to reach out to us if you have any job opportunities that you think either of us would be a good fit for. You can also reach out and open an issue or submit a pull request. To this repository.</p>
