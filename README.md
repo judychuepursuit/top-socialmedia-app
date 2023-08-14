@@ -11,7 +11,6 @@ https://github.com/judychuepursuit and https://github.com/RK-404/
 This “top-socialmedia-app" is the frontend app portion (REACT) that pairs with the "social-media-pair-app" (backend app, EXPRESS) for the Project named: 
 <h3>Social Media App<h3> 
 <img alt="top-socialmedia-app Index page" 
-Change this to the sm app index image//
 src="src/components/images/top-socialmedia-app Index page.png" width="350"></img>
 <br> 
 <h3>My Trello Board:<h3> 
@@ -59,4 +58,3 @@ Note: Make sure that the .env file has been correctly saved inside the main fold
 <h2>We would be excited to hear of any work Collaboration and opportunities!</h2>
 <p>
 As beginner Full-Stack web developers we are seeking and are open to collaborating on work projects. Feel free to reach out to us if you have any job opportunities that you think either of us would be a good fit for. You can also reach out and open an issue or submit a pull request to this repository.</p>
-
