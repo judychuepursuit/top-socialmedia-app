@@ -4,10 +4,12 @@ import { useNavigate, Link } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function NewApp(props) {
+function NewApp() {
   let navigate = useNavigate();
   const [submitError, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  let currentYear = new Date().toJSON().slice(0, 4);
 
   const [app, setApp] = useState({
     name: "",
@@ -23,8 +25,8 @@ function NewApp(props) {
     axios
       .post(`${API}/apps`, newApp)
       .then(
-        (response) => {
-          navigate(`/apps`);
+        (res) => {
+          navigate(`/apps/${res.data.id}`);
           setError(false);
         },
         (error) => {
@@ -40,13 +42,22 @@ function NewApp(props) {
     setApp({ ...app, [event.target.id]: event.target.value });
   };
 
+  const handleNumberChange = (event) => {
+    setApp({ ...app, [event.target.id]: Number(event.target.value) });
+  };
+
   const handleCheckboxChange = () => {
     setApp({ ...app, is_favorite: !app.is_favorite });
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     addApp(app);
+  };
+
+  const checkLength = (event) => {
+    if (event.target.value.length > 4) {
+        event.target.value = event.target.value.slice(0,4); 
+    }
   };
 
   return (
@@ -65,19 +76,25 @@ function NewApp(props) {
         <label htmlFor="rating">App Rating:</label>
         <input
           id="rating"
-          type="text"
+          type="number"
+          min="1"
+          max="5"
+          step="0.1"
           value={app.rating}
-          placeholder="-.-/5"
-          onChange={handleTextChange}
+          placeholder="From 1 to 5"
+          onChange={handleNumberChange}
         />
         <label htmlFor="launched">Launched Year:</label>
         <input
           id="launched"
-          type="text"
+          type="number"
           name="launched"
+          min="1990"
+          max={currentYear}
+          onInput={checkLength}
           value={app.launched}
-          placeholder="Launched Year"
-          onChange={handleTextChange}
+          placeholder="Launch Year"
+          onChange={handleNumberChange}
         />
         <label htmlFor="ma_users">Monthly Users:</label>
         <input
